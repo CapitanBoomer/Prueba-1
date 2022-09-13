@@ -1,13 +1,22 @@
-<label>ingrese rut del alumno</label>
-<input type="number">
+<fieldset><label>ingrese rut del alumno</label>
+<input type="number"
+[value]="nuevoalumno.rut"
+(input)="agregarrut($event)">{{nuevoalumno.rut}}</fieldset>
 <hr>
-<label>ingrese nombre del alumno</label>
-<input type="text">
+<fieldset><label>ingrese nombre del alumno</label>
+<input type="text"
+[value]="nuevoalumno.Nombre"
+(input)="agregarnombre($event)">{{nuevoalumno.Nombre}}</fieldset>
 <hr>
-<label>ingrese apellido del alumno</label>
-<input type="text">
+<fieldset><label>ingrese apellido del alumno</label>
+  <input type="text"
+  [value]="nuevoalumno.Apellido"
+  (input)="agregarapellido($event)">{{nuevoalumno.Apellido}}</fieldset>
 <hr>
-<label>edad del alumno</label>
-<input type="number">
+<fieldset><label>edad del alumno</label>
+<input type="number"
+name="edad"
+[value]="nuevoalumno.Edad"
+(input)="agregaredad($event)">{{nuevoalumno.Edad}}</fieldset>
 <br> <br>
-<button>guardar alumno</button>
+<fieldset><button (click)="guardardatos()">guardar alumno</button></fieldset>

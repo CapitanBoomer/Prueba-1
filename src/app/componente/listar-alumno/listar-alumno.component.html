@@ -1,1 +1,8 @@
-<p>listar-alumno works!</p>
+<section>
+<app-alumnos
+  *ngFor="let student of alumnos"
+  [alumno]="student"
+  (idalumno)="escuchaar($event)">
+
+  </app-alumnos>
+</section>

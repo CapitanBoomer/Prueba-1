@@ -1,5 +1,6 @@
+import { Alumnos } from "./alumnos";
+
 export interface RegHistorial {
-  id: number;
-  Nombre: string;
   fecha: Date;
+  alumno :Alumnos;
 }

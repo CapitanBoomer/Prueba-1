@@ -1,3 +1,11 @@
 <app-fomularioasignaruta></app-fomularioasignaruta>
 <br><br>
-<app-formularioalumno></app-formularioalumno>
+<app-formularioalumno
+(salida)="escucharAlumno()"
+(enviarDato)="agregarnuevo($event)"></app-formularioalumno>
+
+<app-listar-alumno
+[alumnos]="elementoguardado"
+(posIndex)="borrarElemento($event)"
+>
+</app-listar-alumno>

@@ -1,0 +1,35 @@
+<article>
+
+  <h2 *ngIf="alumno.Nombre; then aquiIf; else aquiElse"></h2>
+
+  <ng-template #aquiIf>
+    <h2>{{alumno.Nombre| uppercase}} </h2>
+  </ng-template>
+
+  <ng-template #aquiElse>
+    <h2>Alumno sin nombre</h2>
+  </ng-template>
+
+  <h2 *ngIf="alumno.Apellido; then aquiIf; else aquiElse"></h2>
+
+  <ng-template #aquiIf>
+    <h2>{{alumno.Apellido| uppercase}} </h2>
+  </ng-template>
+
+  <ng-template #aquiElse>
+    <h2>Alumno sin apellido</h2>
+  </ng-template>
+
+  <h2 *ngIf="alumno.Edad; then dosIf; else dosElse"></h2>
+
+<ng-template #dosIf>
+  <h2>{{alumno.Edad }} </h2>
+</ng-template>
+
+<ng-template #dosElse>
+  <h2>Alumno sin edad</h2>
+</ng-template>
+
+  <button
+  (click)="emmitirid()">uwu emitido</button>
+  </article>
