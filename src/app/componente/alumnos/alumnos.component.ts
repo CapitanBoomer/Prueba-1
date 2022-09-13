@@ -11,7 +11,7 @@ export class AlumnosComponent  {
   public emitirId(): void {
     this.idalumno.emit(this.alumno.idalumno);
   }
-  public emmitirid(): void {
+  public emitir(): void {
     this.alumno.idalumno;
     this.idalumno.emit(this.alumno.idalumno);
   }

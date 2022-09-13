@@ -13,7 +13,7 @@ export class FormularioalumnoComponent {
 public nuevoalumno: Alumnos = {
   rut : '',
   Nombre: '',
-  Apellido:'',
+  apellido:'',
   Edad:0
 
 }
@@ -24,7 +24,7 @@ public agregarnombre(evento:Event):void {
 }
 public agregarapellido(evento:Event):void {
   const elemento = evento.target as HTMLInputElement;
-  this.nuevoalumno.Apellido = elemento.value
+  this.nuevoalumno.apellido = elemento.value
   this.salida.emit();
 }
 
@@ -47,7 +47,7 @@ public guardardatos():void{
   this.enviarDato.emit(copia);
   this.nuevoalumno.rut='';
   this.nuevoalumno.Nombre='';
-  this.nuevoalumno.Apellido='';
+  this.nuevoalumno.apellido='';
   this.nuevoalumno.Edad=0;
   console.log('estoy aqui');
   this.salida.emit();

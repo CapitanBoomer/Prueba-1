@@ -1,5 +1,5 @@
 <fieldset><label>ingrese rut del alumno</label>
-<input type="number"
+<input type="text"
 [value]="nuevoalumno.rut"
 (input)="agregarrut($event)">{{nuevoalumno.rut}}</fieldset>
 <hr>
@@ -10,8 +10,8 @@
 <hr>
 <fieldset><label>ingrese apellido del alumno</label>
   <input type="text"
-  [value]="nuevoalumno.Apellido"
-  (input)="agregarapellido($event)">{{nuevoalumno.Apellido}}</fieldset>
+  [value]="nuevoalumno.apellido"
+  (input)="agregarapellido($event)">{{nuevoalumno.apellido}}</fieldset>
 <hr>
 <fieldset><label>edad del alumno</label>
 <input type="number"

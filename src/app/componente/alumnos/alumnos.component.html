@@ -1,35 +1,44 @@
 <article>
+  <h2 *ngIf="alumno.rut; then rutIf; else rutElse"></h2>
 
-  <h2 *ngIf="alumno.Nombre; then aquiIf; else aquiElse"></h2>
+<ng-template #rutIf>
+  <h2>{{alumno.rut }} </h2>
+</ng-template>
 
-  <ng-template #aquiIf>
+<ng-template #rutElse>
+  <h2>Alumno sin edad</h2>
+</ng-template>
+
+  <h2 *ngIf="alumno.Nombre; then nombreIf; else nombreElse"></h2>
+
+  <ng-template #nombreIf>
     <h2>{{alumno.Nombre| uppercase}} </h2>
   </ng-template>
 
-  <ng-template #aquiElse>
+  <ng-template #nombreElse>
     <h2>Alumno sin nombre</h2>
   </ng-template>
 
-  <h2 *ngIf="alumno.Apellido; then aquiIf; else aquiElse"></h2>
+  <h2 *ngIf="alumno.apellido; then apellidoIf; else apellidoElse"></h2>
 
-  <ng-template #aquiIf>
-    <h2>{{alumno.Apellido| uppercase}} </h2>
+  <ng-template #apellidoIf>
+    <h2>{{alumno.apellido| uppercase}} </h2>
   </ng-template>
 
-  <ng-template #aquiElse>
+  <ng-template #apellidoElse>
     <h2>Alumno sin apellido</h2>
   </ng-template>
 
-  <h2 *ngIf="alumno.Edad; then dosIf; else dosElse"></h2>
+  <h2 *ngIf="alumno.Edad; then acaIf; else acaElse"></h2>
 
-<ng-template #dosIf>
+<ng-template #acaIf>
   <h2>{{alumno.Edad }} </h2>
 </ng-template>
 
-<ng-template #dosElse>
+<ng-template #acaElse>
   <h2>Alumno sin edad</h2>
 </ng-template>
 
   <button
-  (click)="emmitirid()">uwu emitido</button>
+  (click)="emitir()">emitir</button>
   </article>
